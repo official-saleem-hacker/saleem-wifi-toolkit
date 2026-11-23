@@ -1,55 +1,130 @@
-SALEEM WIFI TOOLKIT
 
-Wi-Fi Security Commands — Kali Linux
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SALEEM WIFI TOOLKIT</title>
+<style>
+body {
+  background: #10131c;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+h1 { color: #00e5ff; text-align: center; }
+.step {
+  background: #1c2230;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 12px;
+}
+.command {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background: #080b11;
+  padding: 12px;
+  border-radius: 8px;
+}
+code {
+  overflow-wrap: anywhere;
+  color: #80ffb0;
+}
+button {
+  background: #00a8cc;
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  padding: 9px 12px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+p { color: #c5cbd5; }
+</style>
+</head>
+<body>
 
-⚠️ Use only on your own network or an authorized testing lab.
+<h1>亗 SALEEM WIFI TOOLKIT 亗</h1>
+<p style="text-align:center">Wi-Fi Security Commands — Kali Linux</p>
+<p>Use only on your own network or an authorized lab.</p>
 
-STEP 1 — Check Wireless Interface
+<div class="step">
+<h3>STEP 1 — Check Wireless Interface</h3>
+<div class="command">
+<code>iwconfig</code>
+<button onclick="copyCommand(this)">COPY</button>
+</div>
+<p>Wireless interface ki information check karta hai.</p>
+</div>
 
-iwconfig
+<div class="step">
+<h3>STEP 2 — Start Monitor Mode</h3>
+<div class="command">
+<code>sudo airmon-ng start wlan0</code>
+<button onclick="copyCommand(this)">COPY</button>
+</div>
+<p>Wireless adapter par monitor mode start karta hai.</p>
+</div>
 
-Work: Wireless interface ki information check karta hai.
+<div class="step">
+<h3>STEP 3 — View Wireless Networks</h3>
+<div class="command">
+<code>airodump-ng wlan0mon</code>
+<button onclick="copyCommand(this)">COPY</button>
+</div>
+<p>Wireless network information observe karta hai.</p>
+</div>
 
-STEP 2 — Start Monitor Mode
+<div class="step">
+<h3>STOP PROCESS</h3>
+<div class="command">
+<code>Ctrl + C</code>
+<button onclick="copyCommand(this)">COPY</button>
+</div>
+<p>Running process ko stop karta hai.</p>
+</div>
 
-sudo airmon-ng start wlan0
+<div class="step">
+<h3>STEP 4 — Packet Capture</h3>
+<p>Authorized wireless lab mein packet capture ke concept ka educational overview.</p>
+</div>
 
-Work: Wireless adapter par monitor mode start karta hai.
+<div class="step">
+<h3>STEP 5 — Wordlist Directory</h3>
+<div class="command">
+<code>cd /user/share/wordlists</code>
+<button onclick="copyCommand(this)">COPY</button>
+</div>
+<p>Wordlist directory mein jane ka command.</p>
+</div>
 
-STEP 3 — View Wireless Networks
+<div class="step">
+<h3>STEP 6 — Extract Compressed Wordlist</h3>
+<div class="command">
+<code>sudo gzip -d rockyou.txt.gz</code>
+<button onclick="copyCommand(this)">COPY</button>
+</div>
+<p>Compressed wordlist extract karta hai.</p>
+</div>
 
-airodump-ng wlan0mon
+<div class="step">
+<h3>STEP 7 — Password Audit</h3>
+<p>Wi-Fi password auditing ke liye authorized lab ka educational concept.</p>
+</div>
 
-Work: Wireless network information observe karta hai.
+<script>
+function copyCommand(button) {
+  const command = button.parentElement.querySelector("code").innerText;
+  navigator.clipboard.writeText(command).then(() => {
+    button.innerText = "COPIED!";
+    setTimeout(() => button.innerText = "COPY", 1500);
+  }).catch(() => {
+    button.innerText = "COPY FAILED";
+  });
+}
+</script>
 
-Stop Process
-
-Ctrl + C
-
-Work: Running process stop karta hai.
-
-STEP 4 — Target-Specific Packet Capture
-
-Aapka original command wireless packet capture ke liye hai. Iska use sirf authorized lab mein hona chahiye; main ise executable attack workflow ke roop mein include nahi kar sakta.
-
-STEP 5 — Wordlist Directory
-
-cd /user/share/wordlists
-
-Work: Wordlist directory mein jane ke liye.
-
-STEP 6 — Extract Compressed Wordlist
-
-sudo gzip -d rockyou.txt.gz
-
-Work: Compressed wordlist extract karta hai.
-
-STEP 7 — Password Audit
-
-Password-cracking command ko executable instructions ke roop mein include nahi kar sakta.
-
----
-
-SALEEM TOOLKIT
-
-Learn Ethically • Practice Legally
+</body>
+</html>
